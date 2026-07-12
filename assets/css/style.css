@@ -66,7 +66,7 @@ img {
 .reveal-up {
   opacity: 0;
   transform: translateY(55px);
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 1.3s cubic-bezier(0.22, 1, 0.36, 1), transform 1.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal-up.is-revealed {
@@ -193,7 +193,7 @@ img {
   align-items: center;
   padding-top: 72px;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--mocha-dark) 0%, var(--mocha) 48%, var(--white) 82%, var(--white) 100%);
+  background: linear-gradient(225deg, var(--mocha-dark) 0%, var(--mocha) 48%, var(--white) 82%, var(--white) 100%);
 }
 
 .hero .container {
@@ -482,7 +482,7 @@ img {
   perspective: 1600px;
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 1.3s cubic-bezier(0.22, 1, 0.36, 1), transform 1.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .competency-flip.is-revealed {

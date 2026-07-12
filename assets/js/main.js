@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesPerView: 1.3,
       spaceBetween: 24,
       centeredSlides: true,
+      initialSlide: 1,
       loop: false,
       grabCursor: true,
       mousewheel: { forceToAxis: true },
@@ -142,8 +143,8 @@ document.addEventListener("DOMContentLoaded", function () {
         prevEl: ".project-swiper .swiper-button-prev",
       },
       breakpoints: {
-        720: { slidesPerView: 2.2 },
-        1100: { slidesPerView: 3.3 },
+        640: { slidesPerView: 2.2 },
+        900: { slidesPerView: 3.3 },
       },
     });
 
@@ -151,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesPerView: 1.3,
       spaceBetween: 24,
       centeredSlides: true,
+      initialSlide: 1,
       loop: false,
       grabCursor: true,
       mousewheel: { forceToAxis: true },
@@ -160,8 +162,8 @@ document.addEventListener("DOMContentLoaded", function () {
         prevEl: ".testimonial-swiper .swiper-button-prev",
       },
       breakpoints: {
-        720: { slidesPerView: 2.2 },
-        1100: { slidesPerView: 3.3 },
+        640: { slidesPerView: 2.2 },
+        900: { slidesPerView: 3.3 },
       },
     });
   }
