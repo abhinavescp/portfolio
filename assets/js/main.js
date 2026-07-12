@@ -200,6 +200,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // Cross-origin or decode failure: keep the default background.
       }
     }
+    // Dark-themed screenshots (e.g. a code editor UI) sample to near-black,
+    // which clashes with the site's light cream/white card design. Fall back
+    // to the site's own cream tone whenever the sampled edge is too dark to
+    // read as an intentional match rather than a jarring outlier.
+    var FALLBACK_LIGHT = "rgb(250,246,242)";
+    var DARK_LUMINANCE_THRESHOLD = 60;
     function averageRowColor(data) {
       var r = 0,
         g = 0,
@@ -210,7 +216,14 @@ document.addEventListener("DOMContentLoaded", function () {
         g += data[i + 1];
         b += data[i + 2];
       }
-      return "rgb(" + Math.round(r / count) + "," + Math.round(g / count) + "," + Math.round(b / count) + ")";
+      r = Math.round(r / count);
+      g = Math.round(g / count);
+      b = Math.round(b / count);
+      var luminance = 0.299 * r + 0.587 * g + 0.114 * b;
+      if (luminance < DARK_LUMINANCE_THRESHOLD) {
+        return FALLBACK_LIGHT;
+      }
+      return "rgb(" + r + "," + g + "," + b + ")";
     }
     if (img.complete && img.naturalWidth) {
       apply();
