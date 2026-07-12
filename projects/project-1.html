@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bottom-Up Demand Forecasting Methodology | Abhinav Kumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="../index.html#hero" class="nav-logo">Abhinav Kumar</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Competencies</a></li>
+      <li><a href="../index.html#portfolio">Portfolio</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</nav>
+
+<section class="project-hero">
+  <div class="container">
+    <a class="back-link" href="../index.html#portfolio">&#8592; Back to Portfolio</a>
+    <h1>Bottom-Up Demand Forecasting Methodology</h1>
+    <p>STMicroelectronics, forecasting the reporting segment revenue of 50 plus key customers to build forward looking demand signals</p>
+  </div>
+</section>
+
+<section class="project-detail-body">
+  <div class="container">
+
+    <h2>The strategic problem</h2>
+    <p>Every semiconductor company leans on data providers such as OMDIA, WSTS, or S&amp;P Global for demand signals. These providers give useful industry level growth rates, but they cannot show the end market growth trajectory from your own customers' point of view.</p>
+    <p>Take Infineon as an example. Its automotive customer, BMW, reports growth across three segments, Automotive, Financial Services, and Motorcycles. If, in a given quarter, BMW's overall growth comes only from Financial Services, it adds nothing to Infineon's automotive revenue. This is exactly why end market growth needs to be forecast through a customer's segment lens, not through their overall top line number.</p>
+
+    <h2>Situation, task, action, result</h2>
+    <p><strong>Situation.</strong> Industry level, top down forecasts were hiding real segment divergence. There was no system to translate customer performance into a usable demand signal for ST, so planning leaned on lagging, generalized indicators.</p>
+    <p><strong>Task.</strong> Collect segment revenues for 50 plus key customers, build a seasonality indexed consensus forecast model, and validate the bottom up output against WSTS and OMDIA.</p>
+    <p><strong>Action.</strong> Designed and ran a 6 step methodology: historical data collection, revenue split mapping, seasonality indexing using actuals and consensus, forecast construction, industry clustering, and cross validation.</p>
+    <p><strong>Result.</strong> Proprietary, segment level intelligence that enables high value sales prioritization. Product, Supply Chain, Sales, and Marketing, all four business functions, now plan proactively from one shared model.</p>
+
+    <h2>The 6 step forecasting methodology</h2>
+    <ol>
+      <li><strong>Historical segment data collection.</strong> Quarterly revenue per segment per ticker, collected across multiple years of actuals.</li>
+      <li><strong>Seasonality indexing.</strong> Quarterly seasonal indices built from the historical data for each reporting segment.</li>
+      <li><strong>Revenue split mapping.</strong> Extracts each reporting segment's share of a customer's overall revenue.</li>
+      <li><strong>Consensus anchored forecasting.</strong> Seasonality indices combined with analyst consensus to generate segment level forecasts.</li>
+      <li><strong>End industry clustering.</strong> Segments grouped by end market, building a sector level demand trajectory from the customers' lens.</li>
+      <li><strong>Top down cross validation.</strong> Checked against WSTS and OMDIA. Alignment means high confidence, divergence is an early warning to investigate.</li>
+    </ol>
+
+    <h2>Business impact by function</h2>
+    <p><strong>Product Management.</strong> Forward looking customer health signals inform the product roadmap, vision setting, and pricing strategy per segment trajectory.</p>
+    <p><strong>Supply Chain.</strong> Capacity decisions are anchored to forward looking segment demand, not lagging industry data.</p>
+    <p><strong>Marketing.</strong> Go to market focus is mapped to the highest growth clusters, surfacing niche opportunities early.</p>
+    <p><strong>Sales.</strong> Account prioritization narrows down to the reporting segment level, so the team knows which business unit is accelerating before the overall market shows it.</p>
+
+    <h2>Tools and way of working</h2>
+    <div class="tool-list">
+      <span class="tag">Power BI</span>
+      <span class="tag">Microsoft Excel</span>
+      <span class="tag">SharePoint</span>
+      <span class="tag">n8n Automation</span>
+      <span class="tag">Azure OpenAI</span>
+      <span class="tag">WSTS Benchmarking</span>
+      <span class="tag">OMDIA Benchmarking</span>
+    </div>
+
+    <h2>Competencies applied</h2>
+    <div class="tool-list">
+      <span class="tag">Strategic Research and Forecasting</span>
+      <span class="tag">Cross Functional Alignment</span>
+    </div>
+
+    <h2>Dashboard gallery</h2>
+    <div class="project-gallery">
+      <div>
+        <div class="gallery-item has-image">
+          <img src="../assets/images/projects/project-1/powerbi-forecast-table.png" alt="Power BI forecast versus actual table, showing segment level growth by category and year">
+        </div>
+        <p class="gallery-caption">Segment level forecast versus actual, by end industry and year, inside the Power BI model.</p>
+      </div>
+      <div>
+        <div class="gallery-item has-image">
+          <img src="../assets/images/projects/project-1/bottom-up-customer-segment.png" alt="Bottom up customer segment breakdown by automotive and industrial category">
+        </div>
+        <p class="gallery-caption">Automotive and Industrial segment breakdown, cross validated against WSTS and OMDIA.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>Copyright Abhinav Kumar. Built with care.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

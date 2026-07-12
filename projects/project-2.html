@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Enabled Market Intelligence Platform | Abhinav Kumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="../index.html#hero" class="nav-logo">Abhinav Kumar</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Competencies</a></li>
+      <li><a href="../index.html#portfolio">Portfolio</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</nav>
+
+<section class="project-hero">
+  <div class="container">
+    <a class="back-link" href="../index.html#portfolio">&#8592; Back to Portfolio</a>
+    <h1>AI-Enabled Market Intelligence Platform</h1>
+    <p>STMicroelectronics, Automotive and Industrial division, competitive intelligence and automation</p>
+  </div>
+</section>
+
+<section class="project-detail-body">
+  <div class="container">
+
+    <h2>The strategic problem</h2>
+    <p>The EMEA Automotive and Industrial segment had no clear visibility into competitors' and customers' financial intelligence, macro trends, or earnings sentiment. This forced strategic decisions to be made without real data behind them. Specifically, there was no visibility on actual results versus consensus, no system to capture executive sentiment from earnings calls, and no clear understanding of how macroeconomic indices correlate with the semiconductor industry.</p>
+
+    <h2>Situation, task, action, result</h2>
+    <p><strong>Situation.</strong> C-Suite leaders were navigating blind, with no consolidated view of competitor or key customer growth, and decisions made on incomplete data.</p>
+    <p><strong>Task.</strong> Build an AI enabled, end to end competitive and customer intelligence system, covering 12 peers and key customers with the help of AI agents and automation tools.</p>
+    <p><strong>Action.</strong> Pulled financials from Koyfin for 12 competitors and 50 plus key customers, built a 4 mode currency engine, used Power Query to load everything into one unified Power BI dashboard, and analyzed earnings transcripts and macro indicators.</p>
+    <p><strong>Result.</strong> Surfaced a performance gap, ST at plus 0.2 percent versus the industry at plus 10.4 percent. Identified a key investment move from a silicon carbide rival. Directly informed C-Suite resource allocation.</p>
+
+    <h2>The 4 mode currency engine</h2>
+    <p>Applied to both competitor and customer financial data. Without normalizing for currency, cross company comparisons are close to meaningless.</p>
+    <ul>
+      <li><strong>M1, Original Value.</strong> Ground truth, exactly as reported in the original currency.</li>
+      <li><strong>M2, Report Day Rate.</strong> Market perception, converted at the exchange rate on the day earnings were released.</li>
+      <li><strong>M3, Quarterly Average.</strong> Trend analysis, converted at the quarterly average exchange rate.</li>
+      <li><strong>M4, Fixed Reference Date.</strong> Apples to apples comparison, converted at any date you choose.</li>
+    </ul>
+    <p>One competitor, Renesas, showed a 211 million dollar difference between two modes in a single quarter. That gap is pure currency distortion, not a real change in business performance.</p>
+
+    <h2>Intelligence deliverables</h2>
+    <p>360 degree coverage across competitors and key automotive and industrial customers.</p>
+    <ul>
+      <li><strong>Quarterly Intelligence Newsletter.</strong> Market intelligence on the semiconductor industry, its total and served addressable market, product groups, plus financial intelligence, margins, executive and business sentiment, and macro signals for the closest competitors and 50 plus customers.</li>
+      <li><strong>Monthly Performance Reports.</strong> Market intelligence on the industry and the macroeconomic outlook every month, covering indicators such as the PMI and the ZEW index.</li>
+      <li><strong>Ad hoc Strategic Reports.</strong> Detailed analysis of a specific end market or product group whenever a trend needs a closer look.</li>
+    </ul>
+
+    <h2>The automation workflow</h2>
+    <p>An end to end, n8n orchestrated, AI automated data pipeline. It pulls competitor and customer financials from Koyfin, uses an AI agent to review and validate the files, uploads them to SharePoint, and refreshes the Power BI dashboard automatically, without a single manual step.</p>
+    <p>Manual effort per earnings cycle dropped from 2 to 3 days down to under 4 hours. The work shifted from manual data handling to supervising and refining what the AI produces.</p>
+
+    <h2>What this project proves</h2>
+    <ul>
+      <li><strong>Zero incremental cost.</strong> Built on the existing Microsoft enterprise stack, plus a local n8n instance.</li>
+      <li><strong>C-Suite impact.</strong> Resource allocation decisions directly informed, on both an ad hoc and a quarterly review basis.</li>
+      <li><strong>62 plus entities tracked.</strong> 12 competitors and 50 plus key customers, in one platform.</li>
+      <li><strong>1.5 billion dollars.</strong> Forex distortion exposed in a single quarter, inside the closest competitor cluster.</li>
+    </ul>
+
+    <h2>Tools and way of working</h2>
+    <div class="tool-list">
+      <span class="tag">Power BI</span>
+      <span class="tag">Power Query</span>
+      <span class="tag">Koyfin</span>
+      <span class="tag">SharePoint</span>
+      <span class="tag">n8n Automation</span>
+      <span class="tag">Azure OpenAI</span>
+      <span class="tag">DAX</span>
+      <span class="tag">Excel</span>
+    </div>
+
+    <h2>Competencies applied</h2>
+    <div class="tool-list">
+      <span class="tag">Competitive Positioning</span>
+      <span class="tag">Cost and Profit Driver Analysis</span>
+    </div>
+
+    <h2>Automation workflow gallery</h2>
+    <div class="project-gallery">
+      <div>
+        <div class="gallery-item has-image">
+          <img src="../assets/images/projects/project-2/n8n-workflow-koyfin.png" alt="n8n automation workflow pulling Koyfin data, running an AI agent, and refreshing the Power BI dataflow">
+        </div>
+        <p class="gallery-caption">The n8n workflow behind the platform, from scheduled trigger to AI agent review to an automatic Power BI dataflow refresh.</p>
+      </div>
+      <div>
+        <div class="gallery-item has-image">
+          <img src="../assets/images/projects/project-2/wsts-summary-dashboard.png" alt="WSTS summary dashboard showing worldwide semiconductor SAM trends by segment">
+        </div>
+        <p class="gallery-caption">The WSTS market benchmark used to sanity check competitor and industry trends inside the platform.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>Copyright Abhinav Kumar. Built with care.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
