@@ -3,6 +3,7 @@
   --mocha: #6f4e37;
   --mocha-dark: #4a3324;
   --mocha-light: #a8795c;
+  --mocha-pale: #f2e6da;
   --cream: #faf6f2;
   --white: #ffffff;
   --ink: #201812;
@@ -634,13 +635,14 @@ img {
 
 .project-thumb.has-image {
   padding: 0;
-  background: var(--cream);
+  background: var(--mocha-pale);
 }
 
 .project-thumb.has-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  background: var(--mocha-pale);
   position: relative;
   z-index: 1;
 }
@@ -899,18 +901,19 @@ img {
   text-align: center;
   padding: 16px;
   overflow: hidden;
+  border: 2px solid var(--mocha-dark);
 }
 
 .gallery-item.has-image {
   padding: 0;
-  background: var(--ink);
+  background: var(--mocha-pale);
 }
 
 .gallery-item.has-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: var(--ink);
+  background: var(--mocha-pale);
 }
 
 .gallery-caption {
