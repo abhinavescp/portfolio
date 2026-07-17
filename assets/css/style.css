@@ -64,24 +64,28 @@ img {
   padding: 110px 0;
 }
 
-/* ---------- Trust bar ---------- */
-.trust-bar {
-  padding: 48px 0;
-  background: var(--cream);
-  border-top: 1px solid rgba(111, 78, 55, 0.12);
-  border-bottom: 1px solid rgba(111, 78, 55, 0.12);
-}
-
-.trust-bar .container {
+/* ---------- Hero trust bar ---------- */
+.hero-trust-bar {
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+  padding: 20px 28px;
+  background: rgba(250, 246, 242, 0.94);
+  backdrop-filter: blur(6px);
+  border-radius: 100px;
+  box-shadow: var(--shadow);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 28px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.trust-bar-label {
-  font-size: 0.78rem;
+.hero-trust-label {
+  font-size: 0.76rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -89,25 +93,86 @@ img {
   white-space: nowrap;
 }
 
-.trust-bar-logos {
+.hero-trust-logos {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 28px;
 }
 
-.trust-bar-logos img {
-  height: 34px;
+.hero-trust-logos img {
+  height: 30px;
   width: auto;
   object-fit: contain;
   opacity: 0.85;
-  filter: grayscale(15%);
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-.trust-bar-logos img:hover {
+.hero-trust-logos img:hover {
   opacity: 1;
   transform: translateY(-2px);
+}
+
+.hero-trust-next {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mocha);
+  cursor: pointer;
+  animation: giftWiggle 4s ease-in-out infinite;
+}
+
+.hero-trust-next svg {
+  width: 26px;
+  height: 26px;
+}
+
+@keyframes giftWiggle {
+  0%, 82%, 100% { transform: rotate(0deg); }
+  84% { transform: rotate(-10deg); }
+  86% { transform: rotate(9deg); }
+  88% { transform: rotate(-7deg); }
+  90% { transform: rotate(5deg); }
+  92% { transform: rotate(0deg); }
+}
+
+.hero-trust-tooltip {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+  transform: translate(-50%, 8px);
+  width: 190px;
+  background: var(--mocha-dark);
+  color: var(--white);
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.hero-trust-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--mocha-dark);
+}
+
+.hero-trust-next:hover .hero-trust-tooltip,
+.hero-trust-next.is-open .hero-trust-tooltip,
+.hero-trust-next:focus-visible .hero-trust-tooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .reveal-up {
@@ -237,13 +302,17 @@ img {
   position: relative;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-top: 72px;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 64px;
   overflow: hidden;
   background: linear-gradient(225deg, var(--mocha-dark) 0%, var(--mocha) 48%, var(--white) 82%, var(--white) 100%);
 }
 
 .hero .container {
+  width: 100%;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 48px;
@@ -267,7 +336,8 @@ img {
 .hero-name,
 .hero-tagline,
 .hero-actions,
-.hero-photo-wrap {
+.hero-photo-wrap,
+.hero-trust-bar {
   animation: heroZoomIn 1.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
@@ -289,6 +359,10 @@ img {
 
 .hero-actions {
   animation-delay: 1.05s;
+}
+
+.hero-trust-bar {
+  animation-delay: 1.3s;
 }
 
 .hero-kicker {
@@ -1106,6 +1180,24 @@ img {
   .hero-name,
   .hero-name .accent {
     color: var(--white);
+  }
+
+  .hero-trust-bar {
+    max-width: 100%;
+    width: 100%;
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    gap: 16px;
+  }
+
+  .hero-trust-label {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-trust-logos {
+    justify-content: center;
+    gap: 20px;
   }
 
   .hero .container {
