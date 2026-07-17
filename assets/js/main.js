@@ -191,6 +191,11 @@ document.addEventListener("DOMContentLoaded", function () {
 function initChatWidget() {
   var QA_PAIRS = [
     {
+      keywords: ["tell me about yourself", "who are you", "introduce yourself", "yourself"],
+      answer:
+        "I'm a Chemical Engineer turned strategy and market intelligence professional. I've worked across STMicroelectronics, BSH, and Sayano Deutschland, building the actual dashboards, forecasting models, and AI automated pipelines that leadership teams use to make real decisions, not just producing reports about them.",
+    },
+    {
       keywords: ["achieve", "achievement", "proud", "biggest", "impressive", "highlight", "best work"],
       answer:
         "One of my proudest wins is the AI Enabled Market Intelligence Platform at STMicroelectronics. It tracks 12 competitors and 50 plus customers, and its 4 mode currency engine once surfaced a 1.5 billion dollar currency distortion in a single quarter, insight that directly informed C-Suite resource allocation.",
@@ -206,7 +211,7 @@ function initChatWidget() {
         "I built a bottom up demand forecasting model at STMicroelectronics covering 50 plus key customers at the individual business segment level, cross validated against WSTS and OMDIA industry benchmarks.",
     },
     {
-      keywords: ["ai", "automation", "n8n", "agent", "artificial intelligence"],
+      keywords: ["automation", "n8n", "agent", "artificial intelligence", "ai powered", "ai automated", "ai project"],
       answer:
         "I run an AI automated pipeline in n8n that pulls competitor and customer financials, has an AI agent review them, and refreshes a Power BI dashboard with zero manual steps, cutting a 2 to 3 day task down to under 4 hours.",
     },
@@ -236,7 +241,37 @@ function initChatWidget() {
         "I am a Chemical Engineer by training who moved into strategy and market intelligence, with a Master in Management from ESCP Business School, ranked 7th globally by the Financial Times.",
     },
     {
-      keywords: ["why", "differentiate", "unique", "strength", "stand out", "hire you"],
+      keywords: ["currency engine", "currency", "forex", "fx mode"],
+      answer:
+        "The 4 mode currency engine strips forex distortion out of competitor comparisons. It once revealed a 1.5 billion dollar swing in a single quarter that was pure currency noise, not real business performance, exactly the kind of blind spot it is built to catch.",
+    },
+    {
+      keywords: ["certification", "certified", "currently learning", "pursuing next"],
+      answer:
+        "I am currently focused on earning an SAP Technology Consultant certification, on top of hands on experience with Power BI, Tableau, Alteryx, and n8n automation.",
+    },
+    {
+      keywords: ["years of experience", "how long have you", "experience level", "how many years"],
+      answer:
+        "My path started as a Chemical Engineer at JSW Steel, then internships at Sayano Deutschland and BSH during my Master's, followed by my most recent role at STMicroelectronics. Rather than a single number, the Portfolio section shows exactly what I built across each of those roles.",
+    },
+    {
+      keywords: ["location", "based in", "relocate", "relocation", "where do you live", "where are you"],
+      answer:
+        "I am based in Munich, Germany, and open to relocating for the right opportunity.",
+    },
+    {
+      keywords: ["current role", "currently working", "currently employed", "notice period", "availability", "available for"],
+      answer:
+        "My contract at STMicroelectronics was fixed term and has ended, so I am actively looking for my next opportunity. Reach out through the Contact section and we can talk timing.",
+    },
+    {
+      keywords: ["salary", "compensation", "pay range", "day rate"],
+      answer:
+        "That is best discussed directly, reach out through the Contact section and we can talk specifics.",
+    },
+    {
+      keywords: ["why", "differentiate", "unique", "strength", "stand out", "hire you", "value do you bring", "what do you offer"],
       answer:
         "I do not just report numbers. I build the intelligence systems, dashboards, forecasting models, and automated pipelines that leadership teams actually use to make decisions. That is the difference between analysis and infrastructure.",
     },
