@@ -170,6 +170,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
   initChatWidget();
 
+  // Impact stat strip: count each number up from 0 once it scrolls into view.
+  function animateStatCount(el) {
+    var target = parseFloat(el.getAttribute("data-count-to"));
+    var decimals = el.getAttribute("data-count-to").indexOf(".") !== -1 ? 1 : 0;
+    var prefix = el.getAttribute("data-prefix") || "";
+    var suffix = el.getAttribute("data-suffix") || "";
+    var duration = 1600;
+    var startTime = null;
+    function step(timestamp) {
+      if (startTime === null) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = prefix + (target * eased).toFixed(decimals) + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  var statObserver = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateStatCount(entry.target);
+          statObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  document.querySelectorAll(".stat-number").forEach(function (el) {
+    statObserver.observe(el);
+  });
+
   // Touch devices have no hover, so tap toggles the "your logo next" tooltip.
   var trustNext = document.querySelector(".hero-trust-next");
   if (trustNext) {

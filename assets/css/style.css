@@ -69,6 +69,41 @@ img {
   padding: 110px 0;
 }
 
+/* ---------- Impact stat strip ---------- */
+.stat-strip {
+  padding: 64px 0;
+  background: linear-gradient(135deg, var(--mocha-dark), var(--mocha));
+}
+
+.stat-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.stat-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-number {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  color: var(--white);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--cream);
+  max-width: 190px;
+  line-height: 1.4;
+}
+
 /* ---------- Hero trust bar ---------- */
 .hero-trust-bar {
   position: relative;
@@ -1147,6 +1182,11 @@ img {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
+  .stat-strip-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 20px;
+  }
+
   .nav-links {
     position: fixed;
     top: 72px;
