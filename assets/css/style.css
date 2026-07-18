@@ -69,16 +69,20 @@ img {
   padding: 110px 0;
 }
 
-/* ---------- Impact stat strip ---------- */
-.stat-strip {
-  padding: 64px 0;
-  background: linear-gradient(135deg, var(--mocha-dark), var(--mocha));
+/* ---------- Impact stat strip (blended into the hero) ---------- */
+.hero-stat-strip {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 36px auto 0;
+  padding: 0 24px;
 }
 
 .stat-strip-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  gap: 24px;
 }
 
 .stat-item {
@@ -86,22 +90,27 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .stat-number {
   font-family: "Fraunces", serif;
   font-weight: 700;
-  font-size: clamp(2rem, 4.2vw, 3rem);
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
   color: var(--white);
   line-height: 1;
+  -webkit-text-stroke: 1px var(--mocha-dark);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .stat-label {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
   color: var(--cream);
-  max-width: 190px;
+  max-width: 170px;
   line-height: 1.4;
+  text-shadow: -1px -1px 3px rgba(32, 24, 18, 0.85), 1px -1px 3px rgba(32, 24, 18, 0.85),
+    -1px 1px 3px rgba(32, 24, 18, 0.85), 1px 1px 3px rgba(32, 24, 18, 0.85);
 }
 
 /* ---------- Hero trust bar ---------- */
@@ -377,7 +386,8 @@ img {
 .hero-tagline,
 .hero-actions,
 .hero-photo-wrap,
-.hero-trust-bar {
+.hero-trust-bar,
+.hero-stat-strip {
   animation: heroZoomIn 1.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
@@ -403,6 +413,10 @@ img {
 
 .hero-trust-bar {
   animation-delay: 1.3s;
+}
+
+.hero-stat-strip {
+  animation-delay: 1.55s;
 }
 
 .hero-kicker {
