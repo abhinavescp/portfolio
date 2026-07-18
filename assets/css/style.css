@@ -76,7 +76,12 @@ img {
   width: 100%;
   max-width: var(--max-width);
   margin: 36px auto 0;
-  padding: 0 24px;
+  padding: 24px 32px;
+  background: linear-gradient(120deg, rgba(74, 51, 36, 0.5), rgba(74, 51, 36, 0.68));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .stat-strip-grid {
@@ -99,8 +104,6 @@ img {
   font-size: clamp(1.6rem, 3.2vw, 2.3rem);
   color: var(--white);
   line-height: 1;
-  -webkit-text-stroke: 1px var(--mocha-dark);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .stat-label {
@@ -109,8 +112,6 @@ img {
   color: var(--cream);
   max-width: 170px;
   line-height: 1.4;
-  text-shadow: -1px -1px 3px rgba(32, 24, 18, 0.85), 1px -1px 3px rgba(32, 24, 18, 0.85),
-    -1px 1px 3px rgba(32, 24, 18, 0.85), 1px 1px 3px rgba(32, 24, 18, 0.85);
 }
 
 /* ---------- Hero trust bar ---------- */

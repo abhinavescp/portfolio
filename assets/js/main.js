@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  var pageLoadTime = Date.now();
   var navToggle = document.querySelector(".nav-toggle");
   var navLinks = document.querySelector(".nav-links");
 
@@ -190,11 +191,21 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(step);
   }
 
+  // The strip sits inside the hero's own entrance animation (fades in around
+  // 2.3s after page load), so counting up the instant it's technically "in
+  // view" finishes before it is visible at all. Wait out whatever's left of
+  // that reveal before starting the count.
+  var HERO_STAT_REVEAL_MS = 2300;
+
   var statObserver = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          animateStatCount(entry.target);
+          var elapsed = Date.now() - pageLoadTime;
+          var wait = Math.max(0, HERO_STAT_REVEAL_MS - elapsed);
+          setTimeout(function () {
+            animateStatCount(entry.target);
+          }, wait);
           statObserver.unobserve(entry.target);
         }
       });
