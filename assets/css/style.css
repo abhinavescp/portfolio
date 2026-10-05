@@ -211,6 +211,16 @@ img {
   font-size: 1rem;
 }
 
+/* Sections that end on a bridge line hand off to the next section with
+   a short gap (about 1cm total) instead of the usual full section padding. */
+.section:has(> .container > .section-bridge:last-child) {
+  padding-bottom: 10px;
+}
+
+.section:has(> .container > .section-bridge:last-child) + .section {
+  padding-top: 10px;
+}
+
 /* ---------- Nav ---------- */
 .navbar {
   position: fixed;
