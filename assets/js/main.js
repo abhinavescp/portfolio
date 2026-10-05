@@ -215,19 +215,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".stat-number").forEach(function (el) {
     statObserver.observe(el);
   });
-
-  // Touch devices have no hover, so tap toggles the "your logo next" tooltip.
-  var trustNext = document.querySelector(".hero-trust-next");
-  if (trustNext) {
-    trustNext.addEventListener("click", function () {
-      trustNext.classList.toggle("is-open");
-    });
-    document.addEventListener("click", function (e) {
-      if (!trustNext.contains(e.target)) {
-        trustNext.classList.remove("is-open");
-      }
-    });
-  }
 });
 
 // "Ask about my work" chat widget. Rule based and fully static, no API key,
