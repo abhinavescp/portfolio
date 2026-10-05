@@ -285,6 +285,56 @@ img {
   cursor: pointer;
 }
 
+/* ---------- Side scroll-progress dots ---------- */
+.side-dots {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.side-dot {
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(111, 78, 55, 0.25);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.side-dot:hover,
+.side-dot.active {
+  background: var(--mocha);
+  transform: scale(1.3);
+}
+
+.side-dot-label {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  background: var(--mocha-dark);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.side-dot:hover .side-dot-label {
+  opacity: 1;
+}
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -401,6 +451,11 @@ img {
   max-width: 520px;
   margin-bottom: 20px;
   font-weight: 500;
+}
+
+.hero-tagline-edu {
+  display: block;
+  margin-top: 0.5em;
 }
 
 .hero-actions {
@@ -1372,6 +1427,10 @@ img {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
+  .side-dots {
+    display: none;
+  }
+
   .stat-strip-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 36px 20px;

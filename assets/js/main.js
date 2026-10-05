@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var sections = document.querySelectorAll("main .section[id]");
-  var navItems = document.querySelectorAll(".nav-links a");
+  var navItems = document.querySelectorAll(".nav-links a, .side-dot");
 
   if (sections.length && navItems.length) {
     var spyObserver = new IntersectionObserver(
