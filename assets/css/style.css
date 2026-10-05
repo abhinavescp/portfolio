@@ -29,7 +29,7 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
-  font-family: "EB Garamond", "Garamond", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--ink);
   background: var(--white);
   line-height: 1.6;
@@ -39,7 +39,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "EB Garamond", "Garamond", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0 0 0.5em;
   line-height: 1.1;
 }
@@ -99,7 +99,7 @@ img {
 }
 
 .stat-number {
-  font-family: "EB Garamond", "Garamond", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: clamp(1.6rem, 3.2vw, 2.3rem);
   color: var(--white);
@@ -232,7 +232,7 @@ img {
 }
 
 .nav-logo {
-  font-family: "EB Garamond", "Garamond", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: calc(1.2rem + 4pt);
   color: var(--mocha-dark);
@@ -470,7 +470,7 @@ img {
   align-items: center;
   justify-content: center;
   color: var(--white);
-  font-family: "EB Garamond", "Garamond", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   text-align: center;
   padding: 6px;
@@ -689,7 +689,7 @@ img {
 }
 
 .timeline-org {
-  font-family: "EB Garamond", "Garamond", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: var(--mocha-dark);
   font-size: 1.1rem;
@@ -720,7 +720,7 @@ img {
 }
 
 .featured-quote p {
-  font-family: "EB Garamond", "Garamond", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: clamp(1.3rem, 2.4vw, 1.8rem);
   color: var(--mocha-dark);
   font-weight: 600;
@@ -1309,7 +1309,7 @@ img {
 }
 
 .skills-category-title {
-  font-family: "EB Garamond", "Garamond", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: calc(1.2rem + 2pt);
   font-weight: 600;
   color: var(--mocha-dark);
@@ -1372,7 +1372,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "EB Garamond", "Garamond", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 0.6rem;
   flex-shrink: 0;
@@ -1604,7 +1604,7 @@ img {
 }
 
 .chat-widget-header-title {
-  font-family: "EB Garamond", "Garamond", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-size: 1rem;
 }
