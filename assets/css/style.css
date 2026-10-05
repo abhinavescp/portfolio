@@ -695,6 +695,14 @@ img {
   font-size: 1.1rem;
 }
 
+.timeline-year {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--mocha);
+}
+
 .timeline-role {
   color: var(--muted);
   font-size: 0.95rem;
@@ -918,30 +926,6 @@ img {
   color: var(--mocha);
   font-size: 0.9rem;
   display: inline-block;
-}
-
-.earlier-work-title {
-  margin-top: 48px;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  color: var(--mocha-dark);
-}
-
-.earlier-work-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 700px;
-}
-
-.earlier-work-grid .project-card {
-  height: auto;
-}
-
-.earlier-work-grid .project-card:hover,
-.earlier-work-grid .project-card:focus-visible {
-  transform: scale(1.04);
-  z-index: 2;
 }
 
 /* ---------- Testimonials ---------- */
@@ -1509,12 +1493,6 @@ img {
 
   .skills-categories-grid {
     grid-template-columns: 1fr;
-  }
-
-  .earlier-work-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    margin: 0 auto;
   }
 
   .testimonial-grid {
