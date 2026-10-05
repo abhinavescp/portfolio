@@ -1060,6 +1060,34 @@ img {
   background: var(--mocha-dark);
 }
 
+.case-footer-nav {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.case-next-link {
+  font-weight: 600;
+  color: var(--white);
+}
+
+.case-footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.case-footer-contact a {
+  color: var(--cream);
+  font-weight: 600;
+}
+
+.case-footer-copy {
+  opacity: 0.75;
+  margin: 0;
+}
+
 /* ---------- Project detail page ---------- */
 .project-hero {
   padding: 150px 0 60px;
@@ -1091,6 +1119,51 @@ img {
   opacity: 0.75;
   max-width: 640px;
   margin-top: 14px;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.project-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-meta-result {
+  flex: 1 1 100%;
+}
+
+.project-meta-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+  opacity: 0.65;
+}
+
+.project-meta-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  max-width: 560px;
+}
+
+.project-hero .project-meta-callout {
+  margin-top: 24px;
+  margin-bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-weight: 600;
+  color: var(--white);
 }
 
 .project-detail-body {
