@@ -24,6 +24,7 @@ html {
 
 html {
   overflow-x: hidden;
+  scroll-padding-top: 72px;
 }
 
 body {
