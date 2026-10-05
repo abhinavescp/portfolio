@@ -1272,6 +1272,11 @@ img {
   margin-top: 40px;
 }
 
+.project-detail-body p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .project-detail-body ul,
 .project-detail-body ol {
   color: var(--muted);
