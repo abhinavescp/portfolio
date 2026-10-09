@@ -342,13 +342,13 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 16px;
+  gap: 10px;
 }
 
 .hero-bar {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 14px;
-  padding: 14px 24px;
+  padding: 10px 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -371,13 +371,13 @@ img {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--mocha-dark);
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .hero-logo-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px 6px;
+  gap: 12px 6px;
   align-items: center;
 }
 
