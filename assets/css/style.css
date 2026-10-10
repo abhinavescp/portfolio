@@ -330,7 +330,7 @@ img {
 
 .hero-left-photo-row {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 0 0 auto;
 }
 
@@ -1606,6 +1606,10 @@ img {
 
   .hero-left {
     text-align: center;
+  }
+
+  .hero-left-photo-row {
+    justify-content: center;
   }
 
   .hero-tagline {
