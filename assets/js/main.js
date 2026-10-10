@@ -77,6 +77,19 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
 
+    new Swiper(".testimonial-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: true,
+      autoplay: { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
+      speed: 700,
+      pagination: { el: ".testimonial-swiper .swiper-pagination", clickable: true },
+      breakpoints: {
+        720: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+
     new Swiper(".project-swiper", {
       slidesPerView: 1.3,
       spaceBetween: 24,

@@ -1083,34 +1083,8 @@ img {
 }
 
 /* ---------- Testimonials ---------- */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.testimonial-more {
-  margin-top: 28px;
-}
-
-.testimonial-more summary {
-  cursor: pointer;
-  font-weight: 600;
-  color: var(--mocha);
-  list-style: none;
-  margin-bottom: 24px;
-}
-
-.testimonial-more summary::-webkit-details-marker {
-  display: none;
-}
-
-.testimonial-more summary::after {
-  content: " +";
-}
-
-.testimonial-more[open] summary::after {
-  content: " \2212";
+.testimonial-swiper .swiper-slide {
+  height: auto;
 }
 
 .testimonial-card {
@@ -1120,7 +1094,7 @@ img {
   height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   border: 1.5px solid rgba(168, 121, 92, 0.4);
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition);
@@ -1182,6 +1156,8 @@ img {
 .testimonial-role {
   font-size: 0.85rem;
   color: var(--muted);
+  line-height: 1.5;
+  min-height: calc(0.85rem * 1.5 * 4);
 }
 
 .testimonial-linkedin {
@@ -1671,10 +1647,6 @@ img {
   }
 
   .skills-categories-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .testimonial-grid {
     grid-template-columns: 1fr;
   }
 
