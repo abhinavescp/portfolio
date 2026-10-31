@@ -341,8 +341,12 @@ img {
 .hero-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 10px;
+}
+
+.hero-right > .hero-bar-cta {
+  margin-top: auto;
 }
 
 .hero-bar {
@@ -494,6 +498,41 @@ img {
   flex: 1;
   justify-content: center;
   padding: 14px 16px;
+}
+
+.btn-dashboard {
+  flex: 0 0 auto;
+  justify-content: center;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #ffc400 0%, #ff8a00 100%);
+  color: var(--ink);
+  font-weight: 700;
+  box-shadow: 0 0 0 3px rgba(255, 196, 0, 0.35), 0 12px 30px rgba(255, 138, 0, 0.55);
+  animation: dashboardTremble 0.5s linear 1.2s 10;
+}
+
+.btn-dashboard:hover,
+.btn-dashboard:focus-visible {
+  animation: none;
+}
+
+@keyframes dashboardTremble {
+  0%, 100% { transform: translate(0, 0) rotate(0); }
+  10% { transform: translate(-2px, 1px) rotate(-0.6deg); }
+  20% { transform: translate(2px, -1px) rotate(0.6deg); }
+  30% { transform: translate(-3px, 0) rotate(-0.4deg); }
+  40% { transform: translate(3px, 1px) rotate(0.4deg); }
+  50% { transform: translate(-2px, -1px) rotate(-0.6deg); }
+  60% { transform: translate(2px, 1px) rotate(0.6deg); }
+  70% { transform: translate(-3px, -1px) rotate(-0.4deg); }
+  80% { transform: translate(3px, 0) rotate(0.4deg); }
+  90% { transform: translate(-1px, 1px) rotate(-0.3deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-dashboard {
+    animation: none;
+  }
 }
 
 @keyframes heroZoomIn {
