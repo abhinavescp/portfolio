@@ -341,12 +341,8 @@ img {
 .hero-right {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 10px;
-}
-
-.hero-right > .hero-bar-cta {
-  margin-top: auto;
 }
 
 .hero-bar {
@@ -504,10 +500,10 @@ img {
   flex: 0 0 auto;
   justify-content: center;
   padding: 14px 16px;
-  background: linear-gradient(135deg, #ffc400 0%, #ff8a00 100%);
-  color: var(--ink);
+  background: linear-gradient(135deg, #0b6e6e 0%, #138f8c 100%);
+  color: var(--white);
   font-weight: 700;
-  box-shadow: 0 0 0 3px rgba(255, 196, 0, 0.35), 0 12px 30px rgba(255, 138, 0, 0.55);
+  box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.35), 0 12px 30px rgba(19, 143, 140, 0.5);
   animation: dashboardTremble 0.5s linear 1.2s 10;
 }
 
