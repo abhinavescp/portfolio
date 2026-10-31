@@ -308,7 +308,7 @@ img {
   padding-top: 70px;
   padding-bottom: 28px;
   overflow: hidden;
-  background: linear-gradient(to top right, #02364a 0%, var(--mocha-dark) 32%, var(--mocha) 58%, #2cacad 76%, #75e2e0 88%, #d9f5f0 100%);
+  background: linear-gradient(to top right, #02364a 0%, var(--mocha-dark) 30%, var(--mocha) 52%, #2cacad 66%, #75e2e0 76%, #d9f5f0 86%, #ffffff 94%, #ffffff 100%);
 }
 
 .hero .container {
@@ -500,10 +500,12 @@ img {
   flex: 0 0 auto;
   justify-content: center;
   padding: 14px 16px;
-  background: linear-gradient(135deg, #75e2e0 0%, #2cacad 100%);
+  background: linear-gradient(135deg, #f4fffd 0%, #c4f6f2 50%, #96ece8 100%);
+  background-origin: border-box;
+  border-color: transparent;
   color: #02364a;
   font-weight: 700;
-  box-shadow: 0 0 0 3px rgba(117, 226, 224, 0.4), 0 12px 30px rgba(117, 226, 224, 0.45);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5), 0 12px 30px rgba(117, 226, 224, 0.55);
   animation: dashboardTremble 0.5s linear 1.2s 10;
 }
 
@@ -525,8 +527,21 @@ img {
   90% { transform: translate(-1px, 1px) rotate(-0.3deg); }
 }
 
+/* Visitors who ask for reduced motion get a smaller, movement-only version
+   of the tremble (no rotation), still limited to the same 5 seconds. */
+@keyframes dashboardTrembleSoft {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .btn-dashboard {
+    animation: dashboardTrembleSoft 0.5s linear 1.2s 10;
+  }
+
+  .btn-dashboard:hover,
+  .btn-dashboard:focus-visible {
     animation: none;
   }
 }
